@@ -1,0 +1,26 @@
+# Create the project folder
+$ mkdir web-games
+
+# Create a virtual environment to manage dependencies
+$ python -m venv venv
+
+# Activate virtual environment
+$ source venv/bin/activate
+
+# Indicates that the virtual enviroment is active
+(venv) $ 
+
+# Install Django
+(venv) $ pip install Django
+
+# Show all installed packages
+(venv) $ pip freeze
+
+# a Django web application project is made up of a project and its constituent apps. 
+(venv) $ django-admin startproject webapp
+
+# Run Server 
+$ python manage.py runserver
+
+# Create an app
+$ python manage.py startapp tic_tac_toe
