@@ -3,13 +3,20 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Home')
+    context = {}
+    return render(request, 'index.html', context)
 
 def tic_tac_toe(request):
-    return HttpResponse('Tic Tac Toe')
+    context = {}
+    return render(request, 'tictactoe/main.html', context)
 
 def about(request):
-    return HttpResponse('About')
+    context = {}
+    return render(request, 'about.html', context)
 
 def contact(request):
-    return HttpResponse('Contact')
+    context = {}
+    return render(request, 'contact.html', context)
+
+def test(request):
+    return HttpResponse('Test')
