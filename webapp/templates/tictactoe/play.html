@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="text-center">
+    <h1>Tic Tac Toe</h1>
+    <p>{{ game_type }}</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-2 ads">
+            <div class="col-20"> 0 - Player 1</div>
+            <div class="col-20"> 0 - Computer</div>
+        </div>
+        <div class="col-12 col-sm-6 content">
+            <div class="container-fluid display-2 text-center">
+                <div class="row">
+                    <div class="col-4" style="color:rgb(71,158,146); border-right: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-right: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);"> O</div>
+                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="color:rgb(71,158,146);border-right: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-2 tic-panel"> PANEL-THINGY<br>Score:<br>Foo bar: stuff<br> Reset game and all that
+            blah
+        </div>
+
+
+        <div class="col-12 col-sm-2"> aa</div>
+    </div>
+</div>
+{% endblock %}
