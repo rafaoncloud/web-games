@@ -48,6 +48,9 @@ def tic_tac_toe_play_new_game(request):
     context = {}
     return render(request, 'tictactoe/main.html', context)
 
+def snake(request):
+    context = {}
+    return render(request, 'snake/play.html', context)
 
 def about(request):
     context = {}
