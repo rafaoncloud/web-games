@@ -1,17 +1,13 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-<div class="text-center">
-    <h1>Tic Tac Toe</h1>
-    <p>{{ game_type }}</p>
-</div>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-sm-2 ads">
-            <div class="col-20"> 0 - Player 1</div>
-            <div class="col-20"> 0 - Computer</div>
+            <div class="col-20"> <b>{{ game_type }} </b> </div>
+            <div class="col-20"> 0 - <b>Player</b></div>
+            <div class="col-20" style="margin-bottom: 40px"> 0 - Computer</div>
         </div>
-        <div class="col-12 col-sm-6 content">
+        <div class="col-12 col-sm-6 content" style="margin-bottom: 40px">
             <div class="container-fluid display-2 text-center">
                 <div class="row">
                     <div class="col-4" style="color:rgb(71,158,146); border-right: 10px solid rgb(71,158,146);"> X</div>
@@ -19,9 +15,18 @@
                     <div class="col-4" style="color:rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
                 </div>
                 <div class="row">
-                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-right: 10px solid rgb(71,158,146);"> X</div>
-                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);"> O</div>
-                    <div class="col-4" style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4"
+                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-right: 10px solid rgb(71,158,146);">
+                        X
+                    </div>
+                    <div class="col-4"
+                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);">
+                        O
+                    </div>
+                    <div class="col-4"
+                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-left: 10px solid rgb(71,158,146);">
+                        X
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4" style="color:rgb(71,158,146);border-right: 10px solid rgb(71,158,146);"> X</div>
@@ -30,12 +35,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-2 tic-panel"> PANEL-THINGY<br>Score:<br>Foo bar: stuff<br> Reset game and all that
-            blah
+        <div class="col-12 col-sm-2 tic-panel"><b>Turns</b><br>1: Player 1A <br>2: Computer 2B<br>3: Player 3C <br>4: Computer 2A
         </div>
-
-
-        <div class="col-12 col-sm-2"> aa</div>
     </div>
+</div>
+
+<div style="margin-top:60px;">
+    <button type="button" class="btn btn-primary">Clean</button>
+    <button type="button" class="btn btn-primary">Reset</button>
+    <button type="button" class="btn btn-primary">New Game</button>
 </div>
 {% endblock %}
