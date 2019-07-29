@@ -3,46 +3,59 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-sm-2 ads">
-            <div class="col-20"> <b>{{ game_type }} </b> </div>
+            <div class="col-20"><b>{{ game_type }} </b></div>
             <div class="col-20"> 0 - <b>Player</b></div>
             <div class="col-20" style="margin-bottom: 40px"> 0 - Computer</div>
         </div>
-        <div class="col-12 col-sm-6 content" style="margin-bottom: 40px">
-            <div class="container-fluid display-2 text-center">
-                <div class="row">
-                    <div class="col-4" style="color:rgb(71,158,146); border-right: 10px solid rgb(71,158,146);"> X</div>
-                    <div class="col-4" style="color:rgb(71,158,146);"> X</div>
-                    <div class="col-4" style="color:rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
-                </div>
-                <div class="row">
+        <div class="col-12 col-sm-6 content" style="margin-bottom: 40px;">
+            <div class="container-fluid display-2 text-center" style="background-color:rgb(85,186,172);padding: 20px 30px;">
+                <div class="row section-box">
                     <div class="col-4"
-                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-right: 10px solid rgb(71,158,146);">
+                         onclick="location.href='/tic-tac-toe/play/tile=A1'" style="color:rgb(84,84,84); border-right: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4"
+                         onclick="location.href='/tic-tac-toe/play/tile=A2'" style="color:rgb(84,84,84);"> X</div>
+                    <div class="col-4"
+                         onclick="location.href='/tic-tac-toe/play/tile=A3'" style="color:rgb(84,84,84);border-left: 10px solid rgb(71,158,146);"> X</div>
+                </div>
+                <div class="row section-box">
+                    <div class="col-4"
+                         style="color:rgb(84,84,84);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-right: 10px solid rgb(71,158,146);">
                         X
                     </div>
                     <div class="col-4"
-                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);">
+                         style="color:rgb(84,84,84);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);">
                         O
                     </div>
                     <div class="col-4"
-                         style="color:rgb(71,158,146);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-left: 10px solid rgb(71,158,146);">
+                         style="color:rgb(84,84,84);border-bottom: 10px solid rgb(71,158,146);border-top: 10px solid rgb(71,158,146);border-left: 10px solid rgb(71,158,146);">
                         X
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4" style="color:rgb(71,158,146);border-right: 10px solid rgb(71,158,146);"> X</div>
-                    <div class="col-4" style="color:rgb(71,158,146);"> X</div>
-                    <div class="col-4" style="color:rgb(71,158,146);border-left: 10px solid rgb(71,158,146);"> X</div>
+                <div class="row section-box">
+                    <div class="col-4" style="color:rgb(84,84,84);border-right: 10px solid rgb(71,158,146);"> X</div>
+                    <div class="col-4" style="color:rgb(84,84,84);"> X</div>
+                    <div class="col-4" style="color:rgb(84,84,84);border-left: 10px solid rgb(71,158,146);"> X</div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-2 tic-panel"><b>Turns</b><br>1: Player 1A <br>2: Computer 2B<br>3: Player 3C <br>4: Computer 2A
+        <div class="col-12 col-sm-2 tic-panel"><b>Turns</b><br>1: Player 1A <br>2: Computer 2B<br>3: Player 3C <br>4:
+            Computer 2A
         </div>
     </div>
 </div>
 
-<div style="margin-top:60px;">
-    <button type="button" class="btn btn-primary">Clean</button>
-    <button type="button" class="btn btn-primary">Reset</button>
-    <button type="button" class="btn btn-primary">New Game</button>
+<div class="container" style="margin-top:60px;">
+    <form class="d-inline-block" action='/tic-tac-toe/play/clean/' method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Clean</button>
+    </form>
+    <form class="d-inline-block" action='/tic-tac-toe/play/reset/' method='POST'>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Reset</button>
+    </form>
+    <form class="d-inline-block" action='/tic-tac-toe/play/new-game/' method='POST'>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">New Game</button>
+    </form>
 </div>
 {% endblock %}

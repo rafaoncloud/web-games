@@ -1,4 +1,30 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 <h1>Hello from the index page</h1>
+<div class="row d-flex justify-content-center" style="margin: 60px 0">
+    <div class="card col-sm-3" style="margin-bottom:15px;">
+        {% load static %}
+        <img class="card-img-top" style="margin: 15px 0"
+             src="https://i.ibb.co/rczcBNc/Screen-Shot-2019-07-29-at-09-52-17.png" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Tic Tac Toe Game Supporting </p>
+        </div>
+    </div>
+    <div class="card col-sm-3" style="margin-left: 20px;margin-right: 20px; margin-bottom:15px;">
+        <img class="card-img-top" style="margin: 15px 0"
+             src="..." alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    <div class="card col-sm-3" style="margin-bottom:15px;">
+        <img class="card-img-top" src="..."
+             style="margin: 15px 0" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
